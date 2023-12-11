@@ -7,7 +7,7 @@ CREATE TABLE `Users`(
     `id` int(10) NOT NULL auto_increment,
     `firstname` varchar(255) NOT NULL DEFAULT '',
     `lastname` varchar(255) NOT NULL DEFAULT '',
-    `pssword` varchar(255) NOT NULL DEFAULT '',
+    `password` varchar(255) NOT NULL DEFAULT '',
     `email` varchar(255) NOT NULL DEFAULT '',
     `role` varchar(255) NOT NULL DEFAULT '',
     `created_at` DATETIME,

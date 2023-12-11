@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <title>DOLPHIN CUSTOMER RELATIONSHIP MANAGEMENT SYSTEM</title>
+</head>
+<body>
+
+    <header>
+        <div class="top">
+            <img src="images/dolphin.jpg" alt="dolphin logo" id="dolphin">
+            <h3>Dolphin CRM</h3>
+        </div>
+    </header>
+    
+    <div class="container">
+
+        <!--Sidebar Section-->
+        <aside>
+        <div class="sidebar">
+            <a href = "index.html" class ="active">
+                <span class="material-icons-sharp">
+                dashboard
+                </span>
+                <h3>Home</h3>
+            </a>
+            <a href = "newUserPage.html">
+                <span class="material-icons-sharp">
+                    account_circle
+                </span>
+                <h3>New Contact</h3>
+            </a>
+            <a href = "viewUserPage.php">
+                <span class="material-icons-sharp">
+                    person
+                </span>
+                <h3>Users</h3>
+            </a>
+            <a href = "logout.php" target="_blank">
+                <span class="material-icons-sharp">
+                    logout
+                </span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+        </aside>
+        <!--End of Sidebar Section-->
+
+        <!--Main Section-->  
+        <main>
+            <div class="dashboard-head">
+                <h1>DASHBOARD</h1>
+                <button type="submit"> ➕ ADD CONTACT</button>
+            </div>
+            <div class="filter-table-headings">
+                <span class="material-icons-sharp">
+                    filter_alt
+                </span>
+                <p><strong>Filter By: </strong></p>
+                
+                <div><button>All</button></div>
+                <div><button>Sales Leads</button></div>
+                <div><button>Support</button></div>
+                <div><button>Assigned to me</button></div>
+                
+            </div>
+
+            <!-- PHP Retrieval Section -->
+            <iframe src="dashboardcontacts.php" frameborder="0">hello</iframe>
+            <?php
+                // Connect to the database
+                $servername = "localhost";
+                $username = "finalproject";
+                $password = "password123";
+                $dbname = "dolphin_crm";
+
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Check the connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Retrieve data from the table
+                $sql = "SELECT * FROM Contacts";
+                $result = $conn->query($sql);
+
+                // Display the data in an HTML table
+                echo "<table border='1'>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Company</th>
+                            <th>Type</th>
+                        </tr>";
+
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>
+                            <td>{$row['title', 'firstname', 'lastname']}</td>
+                            <td>{$row['email']}</td>
+                            <td>{$row['company']}</td>
+                            <td>{$row['type']}</td>
+                        </tr>";
+                }
+
+                echo "</table>";
+
+                // Close the database connection
+                $conn->close();
+                ?>
+            
+        </main>
+    <!-- End of Main Section -->
+
+    </div>
+</body>
+</html>
