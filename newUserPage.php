@@ -22,10 +22,10 @@ $dbname = 'dolphin_crm';
 $user = 'finalproject';
 $pass = 'password123';
 
-$pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $hash);
+$pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
 
 
-$sql = "INSERT INTO Users(firstname,lastname,email,role,password) Values($fname,$lname,$eml,$role,$hash);";
+$sql = "INSERT INTO Users(firstname,lastname,password,email,role) Values($fname,$lname,$hash,$eml,$role);";
 
 $stmt = $pdo->query($sql);
 
