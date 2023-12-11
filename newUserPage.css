@@ -1,13 +1,17 @@
 
 #body{
     display: flex;
-    
 }
 
 nav {
 background-color: white; 
 color: black; 
 padding: 20px; 
+
+}
+nav ul{
+    list-style: none;
+    
 }
 nav a {
 color: black; 
@@ -20,7 +24,6 @@ display: inline-block;
 
 div #Name{
     display: flex;
-    
     
 }
 div #Email-Password{
