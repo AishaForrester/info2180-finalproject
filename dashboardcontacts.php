@@ -22,16 +22,16 @@ echo "<table border='1'>
          <tr>
              <th>Name</th>
              <th>Email</th>
-             <th>Role</th>
-             <th>Created</th>
+             <th>Company</th>
+             <th>Type</th>
          </tr>";
 
 while ($row = $result->fetch_assoc()) {
     echo "<tr>
              <td>{$row['firstname']}</td>
              <td>{$row['email']}</td>
-             <td>{$row['role']}</td>
-             <td>{$row['created_at']}</td>
+             <td>{$row['company']}</td>
+             <td>{$row['type']}</td>
          </tr>";
 }
 
