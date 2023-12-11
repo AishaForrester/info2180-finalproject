@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
   // SQL insert statement
-  $sql = "INSERT INTO Contacts (title, firstname, lastname, email, telephone, company, type, assigned_to, created_by, created_at, updated_at) VALUES ('$title', '$firstname', '$lastname', '$telephone', '$email', '$company', '$type', '$assignedTo','$firstname','$currentDate','$currentDate')";
+  $sql = "INSERT INTO Contacts (title, firstname, lastname, email, telephone, company, type, assigned_to, created_by, created_at, updated_at) VALUES ('$title', '$firstname', '$lastname', '$email', '$telephone', '$company', '$type', '$assignedTo','$firstname','$currentDate','$currentDate')";
 
   if ($conn->query($sql) === TRUE) {
     echo "Record inserted successfully";
