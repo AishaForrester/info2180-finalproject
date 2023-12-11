@@ -1,13 +1,4 @@
  <?php
-/**
- * Function to help print the contents of a variables.
- */
-function dump($value) {
-  echo '<pre>';
-  var_dump($value);
-  echo '</pre>';
-}
-
 
 // Establish a database connection
 $servername = "localhost";
@@ -17,17 +8,12 @@ $dbname = "dolphin_crm";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
 // Process form data
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Sanitize and validate form data (add your validation code here)
-
-
-  dump($_POST);
 
   $currentDate = date('Y-m-d H:i:s');
 
@@ -49,12 +35,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo 'Last Name is empty<br/>';
   }
 
-  // Check if telephone matches this format e.g. 876-999-1234
+  // Check if telephone matches this format e.g. 876-999-9999
   if (!preg_match("/^\d{3}-\d{3}-\d{4}$/", $telephone)) {
     echo 'Telephone number is not valid!<br/>';
   }
 
-  // Check if email is valid
   if (!$email) {
     echo 'Email is not valid!<br/>';
   }
@@ -64,10 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 
 
-  // Prepare SQL insert statement
+  // SQL insert statement
   $sql = "INSERT INTO Contacts (title, firstname, lastname, email, telephone, company, type, assigned_to, created_by, created_at, updated_at) VALUES ('$title', '$firstname', '$lastname', '$telephone', '$email', '$company', '$type', '$assignedTo','$firstname','$currentDate','$currentDate')";
 
-  // Execute the SQL statement
   if ($conn->query($sql) === TRUE) {
     echo "Record inserted successfully";
   } else {
@@ -75,7 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 
-// Close the database connection
 $conn->close();
 ?>
 

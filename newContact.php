@@ -7,6 +7,23 @@
     <script src="script.js"></script>
   </head>
   <body>
+
+  <header>
+    <h1>Dolphin CRM</h1>
+  </header>
+
+  <div class="container">
+  <div class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="homePage.html">Home</a></li>
+        <li><a href="newContact.php">New Contact</a></li>
+        <li><a href="newUserPage.php">Users</a></li>
+        <li><a href="Logout.php">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+
     <div class="box">
       <h1>New Contact</h1>
       <form id="myform" action="process.php"  method="post">
@@ -59,6 +76,7 @@
 
         <button type="submit" name="submitBtn" class="btn">Save</button>
       </form>
+    </div>
     </div>
   </body>
 </html>
