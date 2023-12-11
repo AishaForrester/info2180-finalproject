@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <title>DOLPHIN CUSTOMER RELATIONSHIP MANAGEMENT SYSTEM</title>
+</head>
+<body>
+
+    <header>
+        <div class="top">
+            <img src="images/dolphin.jpg" alt="dolphin logo" id="dolphin">
+            <h3>Dolphin CRM</h3>
+        </div>
+    </header>
+    
+    <div class="container">
+
+        <!--Sidebar Section-->
+        <aside>
+        <div class="sidebar">
+            <a href = "index.html" class ="active">
+                <span class="material-icons-sharp">
+                dashboard
+                </span>
+                <h3>Home</h3>
+            </a>
+            <a href = "newUserPage.html">
+                <span class="material-icons-sharp">
+                    account_circle
+                </span>
+                <h3>New Contact</h3>
+            </a>
+            <a href = "viewUserPage.php">
+                <span class="material-icons-sharp">
+                    person
+                </span>
+                <h3>Users</h3>
+            </a>
+            <a href = "logout.php" target="_blank">
+                <span class="material-icons-sharp">
+                    logout
+                </span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+        </aside>
+        <!--End of Sidebar Section-->
+
+        <!--Main Section-->  
+        <main>
+            <div class="dashboard-head">
+                <h1>DASHBOARD</h1>
+                <button type="submit">
+                    <a href="newUserPage.html">➕ ADD CONTACT</a>
+                </button>
+            </div>
+            <div class="filter-table-headings">
+                <span class="material-icons-sharp">
+                    filter_alt
+                </span>
+                <p><strong>Filter By: </strong></p>
+                
+                <div><button>All</button></div>
+                <div><button>Sales Leads</button></div>
+                <div><button>Support</button></div>
+                <div><button>Assigned to me</button></div>
+                
+            </div>
+
+            <!-- PHP Retrieval Section -->
+            <iframe src="dashboardcontacts.php" frameborder="0">hello</iframe>
+            
+        </main>
+    <!-- End of Main Section -->
+
+    </div>
+</body>
+</html>

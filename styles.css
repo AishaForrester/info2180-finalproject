@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+html{
+    font-size: 14px;
+    scroll-behavior: smooth;    
+}
+
+/*body{
+    width:120vw;
+    height:100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--dark-color);
+    background-color: var(--background-color);
+}*/
+
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: yellow;
+    text-decoration: none;
+}
+
+/*img{
+    display:block;
+    width:100%;
+    object-fit:cover;
+
+}*/
+
+/*.container{
+    display:grid;
+    /* width:96% 
+    margin: 0 auto;
+    gap:1.8rem;
+    grid-template-columns: 12rem auto 23rem;
+    background-color: aliceblue;
+}
+
+/*.container .main{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    gap:1.8rem;
+    margin-top: 1.4rem;
+}*/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    /*align-items: center;*/
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+}
+
+.top h3 {
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#dolphin {
+    height: 80px;
+}
+
+main {
+    margin-left: 10px;
+}
+
+.dashboard-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.dashboard-head h1 {
+    margin: 0;
+}
+
+.dashboard-head button {
+    padding: 10px 20px;
+    background-color: rgb(69, 37, 252);
+    color: black;
+    width: fit-content;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 100%;
+}
+
+.dashboard-head button:active, button:focus {
+    outline: none;
+    background-color: grey;
+}
+
+.filter-table-headings {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+table {
+    border-collapse: separate; /* Use 'separate' to enable spacing between borders */
+    border-spacing: 10px; /* Adjust the spacing as needed */
+    width: 100%;
+}
+
+th, td {
+    /*border: 1px solid #ddd;*/
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.filter-table-headings button {
+    padding: 10px 20px;
+    background-color: aliceblue;
+    color: black;
+    width: fit-content;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/*
+body {
+    width: 96%;
+}
+
+.letterhead {
+    width: 100%;
+    background-color: red;
+    display: inline-block;
+}
+
+header img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+header span {
+    font-size: 30px;
+    color: white;
+}
+
+header h2 {
+    color: white;
+}
+*/
+
+aside .sidebar {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    border-radius: 15px;
+    /*transition: box-shadow 0.3s ease; */
+    position: relative;
+    top: 5px;
+    width: 250px;
+    height: 600px;
+    /*transition: all 0.3s ease;
+    height:100vh;*/
+}
+
+/*aside .sidebar { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: ;
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease; 
+    position: relative;
+    top: 1rem;
+    transition: all 0.3s ease;
+    height:100vh;
+    left: 0;
+}*/
+
+/*aside .sidebar:hover {
+    box-shadow: var(--box-shadow-hover);
+}
+*/
+
+/*aside .sidebar .sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+aside .sidebar .sidebar-item:hover {
+    background-color: var(--light-color);
+}*/
+aside .sidebar a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--dark-color);
+    height:3.7rem;
+    margin-left:2rem;
+    transition: all 0.3s ease;
+}
+aside .sidebar a:hover{
+    color: yellow;
+}
+aside .sidebar .sidebar-item .icon{
+    font-size: 1.2rem;
+}
+aside .sider a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+aside .sidebar a:last-child .icon{
+    font-size: 1.4rem;
+}
+aside .sidebar a:last-child .text{
+    font-size: 1rem;
+    font-weight: 600;
+}
+aside .sidebar .sidebar-item.active{
+    background-color: var(--light-color);
+}
+aside .sidebar .sidebar-item.active a{
+    color: yellow;
+}
+aside .sidebar a.active{
+    color: yellow;
+    width: 100%;
+    background-color: var(--light-color);
+    margin-left:0;
+}
+
+
+aside .sidebar a.active::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 6px;
+    height: 18px;
+    background-color: yellow;
+}
+aside .sidebar a.active::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 6px;
+    height: 18px;
+    background-color: yellow;
+    border-radius: 0 5px 5px 0;
+}
+
+aside .sidebar a.active span{
+    color: yellow;
+    margin-left: calc(1rem -3px);
+
+}
+
+aside .sidebar a:hover span{
+    margin-left: 0.6rem;
+}
+
+aside .sidebar a.active {
+    background-color: var(--light-color); 
+    color:yellow; 
+}

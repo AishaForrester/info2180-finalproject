@@ -21,6 +21,7 @@ try {
         $adminl_email2 = 'admin@project2.com';
 
         
+        
 
         if (password_verify($adminl_pw2,$hashed_up) && $adminl_email2 == $adminl_email) {
             // Setting the user data in the session
